@@ -3,47 +3,45 @@
 import React, { useRef, useState } from 'react';
 
 const Choose = () => {
-  // Data sesuai gambar referensi lu
   const chooseData = [
     {
       id: '01',
       title: 'VISIONARY CONCEPTS',
       desc: 'Translating abstract ideas into breathtaking spatial realities.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', // Pink
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', 
     },
     {
       id: '02',
       title: 'IMMERSIVE EXPERIENCE',
       desc: 'Environments that engage senses and tell deep stories.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', // Yellow
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', 
     },
     {
       id: '03',
       title: 'TECHNICAL PRECISION',
       desc: 'Every inch and material is calculated for perfect execution.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', // Dark
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', 
     },
     {
       id: '04',
       title: 'BESPOKE DESIGNS',
       desc: 'Tailor-made designs that reflect your brand\'s unique identity.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', // Pink
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', 
     },
     {
       id: '05',
       title: 'SEAMLESS MANAGEMENT',
       desc: 'Full-service management from initial concept to final build.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', // Yellow
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', 
     },
     {
       id: '06',
       title: 'IMPACTFUL MOMENTS',
       desc: 'Designing for moments that leave a lasting impression.',
-      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', // Dark
+      shadowColor: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', 
     }
   ];
 
-  // Logic buat drag-to-scroll
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isDown, setIsDown] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -68,7 +66,7 @@ const Choose = () => {
     if (!isDown || !sliderRef.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Angka 1.5 ini kecepatan gesernya
+    const walk = (x - startX) * 1.5; 
     sliderRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -94,7 +92,6 @@ const Choose = () => {
         </div>
       </div>
 
-      {/* Container Scroll - Sekarang udah dicolok logic mouse event */}
       <div 
         ref={sliderRef}
         onMouseDown={handleMouseDown}
@@ -123,7 +120,6 @@ const Choose = () => {
           </div>
         ))}
         
-        {/* Spacer kosong di akhir */}
         <div className="shrink-0 w-6 md:w-12"></div>
       </div>
     </section>

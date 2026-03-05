@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Setup Warna */
   --color-primary: #fffbed;
   --color-accent-pink: #e71f5c;
   --color-accent-yellow: #f9a71e;
 
-  /* Setup Nama Animasi */
   --animate-marquee: marquee 20s linear infinite;
   --animate-marquee-reverse: marquee-reverse 20s linear infinite;
 
-  /* Setup Keyframes Animasi */
   @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
@@ -22,7 +19,6 @@
   }
 }
 
-/* Base style bawaan lu */
 @layer base {
   body {
     background-color: var(--color-primary);

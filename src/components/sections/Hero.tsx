@@ -4,12 +4,9 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen flex flex-col bg-accent-pink overflow-hidden">
       
-      {/* BAGIAN ATAS: Teks Berjalan (Marquee) */}
       <div className="flex-1 relative flex flex-col justify-center overflow-hidden border-b-[6px] border-zinc-900">
         
-        {/* Baris Teks 1: Jalan ke kiri, Fokus & Looping Mulus */}
         <div className="flex w-max animate-marquee mt-[-40px] md:mt-[-80px]">
-          {/* Set 1 */}
           <div className="flex items-center">
             <span className="text-[100px] md:text-[180px] lg:text-[220px] font-extrabold text-primary opacity-80 pr-8 md:pr-16 tracking-tighter">
               ART DIRECTION • SET DESIGN • VISUAL ARTS • 
@@ -18,7 +15,6 @@ const Hero = () => {
               ART DIRECTION • SET DESIGN • VISUAL ARTS • 
             </span>
           </div>
-          {/* Set 2 (Duplikat identik dari Set 1) */}
           <div className="flex items-center">
             <span className="text-[100px] md:text-[180px] lg:text-[220px] font-extrabold text-primary opacity-80 pr-8 md:pr-16 tracking-tighter">
               ART DIRECTION • SET DESIGN • VISUAL ARTS • 
@@ -29,9 +25,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Baris Teks 2: Jalan ke kanan (reverse), Looping Mulus */}
         <div className="flex w-max animate-marquee-reverse mt-[-40px] md:mt-[-80px]">
-          {/* Set 1 */}
           <div className="flex items-center">
             <span className="text-[100px] md:text-[180px] lg:text-[220px] font-extrabold text-accent-yellow pr-8 md:pr-16 tracking-tighter">
               INSTALLATION • EXHIBITION • EXPERIENCE • 
@@ -51,10 +45,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* BAGIAN BAWAH: Headline, Subheadline & CTA */}
       <div className="bg-primary text-zinc-900 py-8 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 z-10">
-        
-        {/* Teks Kiri */}
         <div className="flex-1 space-y-3 max-w-5xl">
           <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-extrabold uppercase tracking-tight leading-none text-zinc-900">
             Transforming imagination into visual wonders.
@@ -64,7 +55,6 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* Tombol CTA Kanan */}
         <div className="shrink-0 w-full lg:w-auto mt-4 lg:mt-0">
           <a 
             href="#contact" 

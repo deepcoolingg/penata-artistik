@@ -2,8 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 
 const Gallery = () => {
-  // Data foto BTS (Behind The Scenes)
-  // Lu bisa atur rasio fotonya bebas nanti pas upload gambar aslinya
   const galleryData = [
     {
       id: 1,
@@ -11,7 +9,7 @@ const Gallery = () => {
       alt: '3D To Reality',
       desc: 'Translating conceptual sketches into tangible spatial experiences.',
       height: 'h-[400px]',
-      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', // Pink shadow
+      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(231,31,92,1)]', 
     },
     {
       id: 2,
@@ -19,7 +17,7 @@ const Gallery = () => {
       alt: 'Theatre Carpentry',
       desc: 'Create and prepare all the needs for properties and sets.',
       height: 'h-[250px]',
-      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', // Yellow shadow
+      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(249,167,30,1)]', 
     },
     {
       id: 3,
@@ -27,7 +25,7 @@ const Gallery = () => {
       alt: '3D Set Design & Build',
       desc: 'Orchestrating the chaos of set construction with precise field coordination.',
       height: 'h-[350px]',
-      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', // Dark shadow
+      shadow: 'hover:shadow-[8px_8px_0px_0px_rgba(24,24,27,1)]', 
     },
     {
       id: 4,
@@ -59,7 +57,6 @@ const Gallery = () => {
     <section id="gallery" className="py-24 px-6 md:px-12 lg:px-24 bg-primary border-b-[6px] border-zinc-900">
       <div className="max-w-7xl mx-auto space-y-12">
         
-        {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-[4px] border-zinc-900 pb-8">
           <div className="space-y-4">
             <h2 className="text-5xl md:text-6xl font-extrabold uppercase tracking-tighter text-zinc-900">
@@ -72,17 +69,13 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Masonry Grid Layout menggunakan CSS Columns Tailwind */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           {galleryData.map((item) => (
-            // break-inside-avoid biar gambarnya ga kepotong di tengah-tengah kolom
             <div 
               key={item.id} 
               className={`break-inside-avoid relative group border-[4px] border-zinc-900 bg-zinc-200 overflow-hidden transition-all duration-300 -translate-y-1 hover:-translate-y-2 ${item.shadow}`}
             >
-              {/* Gambar Dummy (Bisa diganti foto asli nanti) */}
               <div className={`relative w-full ${item.height}`}>
-                {/* Fallback color kalau gambar belum di-load */}
                 <div className="absolute inset-0 bg-zinc-300 animate-pulse"></div>
                 <Image 
                   src={item.src} 
@@ -92,7 +85,6 @@ const Gallery = () => {
                 />
               </div>
 
-              {/* Caption muncul pas di-hover (Desktop) atau selalu ada di bawah (Mobile) */}
               <div className="absolute bottom-0 left-0 w-full bg-zinc-900 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20 border-t-[4px] border-zinc-900">
                 <p className="text-accent-yellow font-extrabold uppercase text-sm tracking-widest mb-1">
                   {item.alt}

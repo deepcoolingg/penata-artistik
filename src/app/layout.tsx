@@ -4,7 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/layout/Navbar"; 
 import Footer from "@/components/layout/Footer"; 
-import FloatingWhatsapp from "@/components/ui/FloatingWhatsapp"; // <--- IMPORT DI SINI
+import FloatingWhatsapp from "@/components/ui/FloatingWhatsapp";
 
 const openSans = Open_Sans({ 
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <FloatingWhatsapp /> {/* <--- TARUH DI SINI BIAR NGAMBANG */}
+        <FloatingWhatsapp /> 
       </body>
     </html>
   );
