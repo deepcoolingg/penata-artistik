@@ -2,22 +2,18 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "@/components/layout/Navbar"; 
-import Footer from "@/components/layout/Footer"; 
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import FloatingWhatsapp from "@/components/ui/FloatingWhatsapp";
 
-const openSans = Open_Sans({ 
+const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ['300', '400', '600', '700', '800'],
 });
 
 export const metadata: Metadata = {
   title: "Par.ti Haus | Art Direction",
-  description: "Company profile and portfolio for art directing, music videos, TVC, and event installations.",
-  icons: {
-    icon: "/images/parti.png", 
-    apple: "/images/parti.png",
-  },
+  description: "Transforming imagination into visual wonders.",
 };
 
 export default function RootLayout({
@@ -33,7 +29,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <FloatingWhatsapp /> 
+        <FloatingWhatsapp />
       </body>
     </html>
   );
